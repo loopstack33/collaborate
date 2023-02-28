@@ -13,8 +13,10 @@ class myText extends StatelessWidget {
   TextAlign? textAlign;
   TextDecoration? decoration;
   FontWeight? fontWeight;
+  TextOverflow? overflow;
   myText(
       {Key? key,
+        this.overflow,
         this.textAlign,
         this.decoration,
         this.decColor,
@@ -36,6 +38,7 @@ class myText extends StatelessWidget {
         fontWeight: fontWeight,
         decoration: decoration,
         decorationColor: decColor ?? white,
+        overflow: overflow
       ),
       textAlign: textAlign,
     );

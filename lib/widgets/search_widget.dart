@@ -18,9 +18,9 @@ class SearchWidget extends StatelessWidget {
         decoration:const InputDecoration(
           border: InputBorder.none,
           hintText: "Search song",
-          hintStyle: TextStyle(color: white,fontSize: 18,fontFamily: "Poppins",fontWeight: FontWeight.w300),
-          suffixIcon: Icon(Icons.mic_rounded,color: white),
-          prefixIcon: Icon(Icons.search_rounded,color: white,),
+          hintStyle: TextStyle(color: white,fontSize: 14,fontFamily: "Poppins",fontWeight: FontWeight.w300),
+          suffixIcon: Icon(Icons.mic_rounded,color: white,size: 20,),
+          prefixIcon: Icon(Icons.search_rounded,color: white,size: 20,),
         ),
       ),
     );

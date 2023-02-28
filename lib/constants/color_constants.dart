@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const white = Color(0xFFFFFFFF);
 const greyText = Color(0xFFC5C5C5);
+const blueColor = Color(0xFF051D4D);
 
 const background = LinearGradient(
   colors: [

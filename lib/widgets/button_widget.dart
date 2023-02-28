@@ -4,20 +4,21 @@ import '../constants/color_constants.dart';
 
 class ButtonWidget extends StatelessWidget {
   final IconData image;
-  const ButtonWidget({Key? key,required this.image}) : super(key: key);
+  final bool isPop;
+  const ButtonWidget({Key? key,required this.image,required this.isPop}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 55,
-      height: 55,
+      width:isPop? 45: 50,
+      height:isPop? 45: 50,
       decoration: BoxDecoration(
         color: white.withOpacity(0.2),
-        borderRadius: BorderRadius.circular(17),
-
+        borderRadius:isPop? null:BorderRadius.circular(17),
+        shape: isPop? BoxShape.circle:BoxShape.rectangle
       ),
       child: Padding(
-        padding:const EdgeInsets.all(12),
+        padding:const EdgeInsets.all(1),
         child: Icon(image,color: white,),
       )
     );

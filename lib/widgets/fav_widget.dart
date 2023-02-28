@@ -3,11 +3,11 @@ import 'package:collaborate/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
-class SongWidget extends StatelessWidget {
+class FavWidget extends StatelessWidget {
   final String text;
   final int id;
   final ArtworkType type;
-  const SongWidget({Key? key,required this.text,required this.id,required this.type}) : super(key: key);
+  const FavWidget({Key? key,required this.text,required this.id,required this.type}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,25 +16,25 @@ class SongWidget extends StatelessWidget {
       children: [
         QueryArtworkWidget(id: id,
             type: type,
-            artworkHeight: 100,
-            artworkWidth: 100,
+            artworkHeight: 80,
+            artworkWidth: 80,
             nullArtworkWidget: Container(
-                width: 100,
-                height: 100,
+                width: 80,
+                height: 80,
                 decoration:const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: greyText
+                    shape: BoxShape.circle,
+                    color: greyText
                 ),
                 child:const Icon(
-                  Icons.music_off,
+                  Icons.image_not_supported_outlined,
                   color: white,
                   size: 35,
                 ))
         ),
         const SizedBox(height: 5),
         SizedBox(
-          width: 150,
-          child: myText(text: text, fontFamily: "Poppins", size:14, color: white,fontWeight: FontWeight.w500,textAlign: TextAlign.center,)
+          width: 140,
+          child: myText(text: text, fontFamily: "Poppins", size:12, color: white,fontWeight: FontWeight.w500,textAlign: TextAlign.center,)
         )
       ],
     );
